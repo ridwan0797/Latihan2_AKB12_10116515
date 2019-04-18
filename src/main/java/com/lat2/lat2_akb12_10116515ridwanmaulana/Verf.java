@@ -1,0 +1,37 @@
+package com.lat2.lat2_akb12_10116515ridwanmaulana;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class Verf extends AppCompatActivity {
+
+
+   Button et;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_verf);
+
+
+        //Nama :Ridwan Maulana
+        //Nim :10116515
+        //AKB-12
+        //Waktu Pengerjaan : 18 - 19 April 2019
+
+
+        et = (Button) findViewById(R.id.btn_send);
+        et.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Verf.this, Final.class);
+                Verf.this.startActivity(intent);
+                Verf.this.finish();
+            }
+        });
+    }
+}
